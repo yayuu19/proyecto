@@ -1,3 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Zetta&display=swap');
+
 * {
+    margin: 0;
+}
+
+body {
+    background-color: #d07e8a;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
+main {
+    display: grid;
+    grid-template-columns: repeat(13,100vw);
+    grid-template-rows: repeat(1,100vh);
+}   
+
+main>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100vh;
+} 
+
+/*HALLWAY*/
+
+#hallway {
+    background-image: url(../img/hallway.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60%;
+    background-color: #d07e8a;
+}
+
+
+/*ICONS*/
+
+.far {
+    font-size: 50px;
+    color: rgb(228, 216, 112);
+}
+
+.fa-arrow-alt-circle-right {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+}
+
+.fa-arrow-alt-circle-left {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+}
+
+.fa-arrow-alt-circle-up {
+    position: absolute;
+    top: 20px;
+    right: 50%;
+}
+
+.fa-arrow-alt-circle-down {
+    position: absolute;
+    bottom: 20px;
+    right: 50%;
+}
+
+.fa-map-marked-alt {
+    font-size: 80px;
+    position: absolute;
+    bottom: 30px;
+    right: 40px;
+}
+
+.fa-map-marked-alt:hover {
+    color: rgb(228, 216, 112);
+}
+
+/*BUTTON*/
+
+.button-text {
+    text-decoration: none;
+    color: white !important;
+    text-transform: uppercase;
+} 
+
+button {
+    background: #426de4;
+    padding: 20px;
+    border-radius: 5px;
+    display: inline-block;
+    border: none;
+    transition: all 0.4s ease 0s;
+}
+
+button:hover {
+    background: rgb(189, 180, 102);
+    letter-spacing: 1px;
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+    transition: all 0.4s ease 0s;
+}
+
+/*CODE*/
+
+input {
+    width: 80px;
+    font-family: 'Lexend Zetta', sans-serif;
+    text-align: center;
+    border-radius: 4px;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+

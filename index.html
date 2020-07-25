@@ -4,55 +4,136 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buscando a Maggie</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
 </head>
 <body>
-    <div>Probando el branch</div>
-    <div>Sigo probando el branch</div>
-    <div id="intro">
-        <h2>Intro</h2>
-    </div>
-    <div id="entry">
-        <h2>Entrada</h2>
-    </div>
-    <div id="hall">
-        <h2>Hall</h2>
-    </div>
-    <div id="living">
-        <h2>Living</h2>
-    </div>
-    <div id="kitchen">
-        <h2>Cocina</h2>
-    </div>
-    <div id="dinning-room">
-        <h2>Comedor</h2>
-    </div>
-    <div id="hallway">
-        <h2>Pasillo</h2>
-        <div>
-            <h3>Mggie's Room</h3>
+    <main scroll="no" style="overflow: hidden">
+        <div id="intro">
+            <h2>Intro</h2>
+            <a href="#entry">
+                <i class="far fa-arrow-alt-circle-right"></i>
+            </a>
         </div>
-        <div>
-            <h3>Puerta Bart</h3>
+        <div id="entry">
+            <h2>Entrada</h2>
+            <a href="#hall">
+                <i class="far fa-arrow-alt-circle-up"></i>
+            </a>
+            <div>
+                <i class="fas fa-map-marked-alt"></i>
+            </div>
         </div>
-        <div>
-            <h3>Puerta Lisa</h3>
-    </div>
+        <div id="hall">
+            <h2>Hall</h2>
+            <a href="#living">
+                <i class="far fa-arrow-alt-circle-left"></i>
+            </a>
+            <a href="#hallway">
+                <i class="far fa-arrow-alt-circle-up"></i>
+            </a>
+            <a href="#dinning-room">
+                <i class="far fa-arrow-alt-circle-right"></i>
+            </a>
+            <div>
+                <i class="fas fa-map-marked-alt"></i>
+            </div>
+        </div>
+        <div id="living">
+            <h2>Living</h2>
+            <a href="#kitchen">
+                <i class="far fa-arrow-alt-circle-up"></i>
+            </a>
+            <a href="#hall">
+                <i class="far fa-arrow-alt-circle-right"></i>
+            </a>
+            <div>
+                <i class="fas fa-map-marked-alt"></i>
+            </div>
+        </div>
+        <div id="kitchen">
+            <h2>Cocina</h2>
+            <a href="#living">
+                <i class="far fa-arrow-alt-circle-left"></i>
+            </a>
+            <a href="#dinning-room">
+                <i class="far fa-arrow-alt-circle-right"></i>
+            </a>
+            <div>
+                <i class="fas fa-map-marked-alt"></i>
+            </div>
+        </div>
+        <div id="dinning-room">
+            <a href="#kitchen">
+                <i class="far fa-arrow-alt-circle-up"></i>
+            </a>
+            <h2>Comedor</h2>
+                <a href="#hall">
+                    <i class="far fa-arrow-alt-circle-left"></i>
+                </a>
+                <div>
+                    <i class="fas fa-map-marked-alt"></i>
+                </div>
+        </div>
+        <div id="hallway">
+            <form action="#maggie-room" id="form">
+                <label>
+                    <input type="text" name="code" size="20" id="code" required pattern="1234">
+                </label>
+                <label>
+                    <input type="submit" value="check" id="check">
+                </label>
+            </form>
+            <a href="#hall">
+                <i class="far fa-arrow-alt-circle-down"></i>
+            </a>
+            <a href="#lisa-room">
+                <i class="far fa-arrow-alt-circle-left"></i>
+            </a>
+            <a href="#bart-room">
+                <i class="far fa-arrow-alt-circle-right"></i>
+            </a>
+            <div>
+                <i class="fas fa-map-marked-alt"></i>
+            </div>
+        </div>
     </div>
     <div id="lisa-room">
         <h2>Cuarto de Lisa</h2>
+        <a href="#hallway">
+            <i class="far fa-arrow-alt-circle-right"></i>
+        </a>
+        <div>
+            <i class="fas fa-map-marked-alt"></i>
+        </div>
     </div>
     <div id="bart-room">
         <h2>Cuarto de Bart</h2>
+        <a href="#hallway">
+            <i class="far fa-arrow-alt-circle-left"></i>
+        </a>
+        <div>
+            <i class="fas fa-map-marked-alt"></i>
+        </div>
     </div>
     <div id="maggie-room">
-        <h2>Cuarto de Maggie</h2>
+        <!-- Maggie's room -->
+        <h2>¡Maggie fue raptada por los extraterrestres! Tendremos que aniquilarlos...</h2>
+        <button>
+            <a href="#game" class="button-text">Comenzar</a>
+        </button>
     </div>
     <div id="game">
+        <a href="#end">
+            <i class="far fa-arrow-alt-circle-up"></i>
+        </a>
         <h2>Game</h2>
     </div>
     <div id="end">
         <h2>FELICIDADES, SALVASTE A MAGGIE DE LOS BICHOS &#x1F604;</h2>
-    </div>
+        <button><a href="#intro" class="button-text">Do you want to play again?</a></button>
+    </div> 
+    </main>
     <script src="js/main.js"></script>
 </body>
 </html>
