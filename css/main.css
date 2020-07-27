@@ -24,6 +24,54 @@ div{
 #intro{
     grid-row: 3;
     grid-column: 1;
+    background-image: linear-gradient(to bottom, rgb(57, 84, 202),  skyblue);
+    position: relative;
+}
+
+.cloud{
+    position: absolute;
+    width: 70%;
+}
+
+#cloud1{
+    left: 0;
+    z-index: 2;
+    animation-name: cloudMovement;
+    animation-duration: 4s;
+}
+
+@keyframes cloudMovement{
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-10em);
+    }
+
+}
+
+#cloud2{
+    right: 0;
+    transform: translateX(-10em) 4s;
+}
+
+#title{
+    width: 50%;
+    z-index: 1;
+    animation-name: titleMovement;
+    animation-duration: 4s;
+    animation-delay: 1s;
+}
+
+@keyframes titleMovement{
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.2);
+    }
 }
 
 #entry{
@@ -116,6 +164,7 @@ div{
 .left-arrow a, .right-arrow a, .bottom-arrow a, .top-arrow a{
     width: inherit;
     height: inherit;
+    z-index: 1000;
 }
  
  
