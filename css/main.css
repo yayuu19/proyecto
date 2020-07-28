@@ -19,6 +19,7 @@ div{
     align-items: center;
     position: relative;
     height: 100vh;
+    
 }
 
 #intro{
@@ -32,8 +33,114 @@ div{
 }
 
 #hall{
-    grid-row: 2;
-    grid-column: 2;
+    width: 100vw;
+    height: 100vh;
+    background-color:pink;
+    perspective: 450px;}
+    
+
+
+#piso{width: 68%;
+      height: 40%;
+      position: absolute;
+       bottom:0px;
+      right: 0px;
+      left: 220px;
+      background-color:rgb(177, 99, 21);
+      transform: rotateX(75deg);
+      border: black solid;
+      border-bottom: transparent;
+      
+        }
+
+#puertacentral{width: 150px;
+        height: 300px;
+        border-radius: 50px 50px 0px 0px;
+        position: absolute;
+        left: 400px;
+        bottom: 200px;
+        z-index: 1;
+        background-color:saddlebrown;
+        border: black solid;
+        border-bottom: transparent;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        
+}
+#picaporte{
+    width: 20px;
+    height: 20px;
+    background-color: yellow;
+    border-radius:10px;
+    margin-left: 1em;
+    border: black solid;
+}
+#esc{
+    perspective: 110px;
+    position: absolute;
+    bottom: 100px;
+    right:330px;
+}
+#escalera{
+    width: 100px;
+    height: 450px;
+    z-index: 1;
+    transform: rotateX(7.5deg);
+    display: flex;
+    flex-direction: column;
+}
+.escalera>div:nth-child(2n){
+    background-color: rgb(149, 82, 226);
+    height:35.4px
+}
+.escalera>div:nth-child(odd){
+    background-color: rgb(173, 171, 255);
+    height:50.4px
+}
+#escalera *{
+    width: 250px;
+    border: black solid;
+}
+#left-door{
+    perspective: 100px;
+}
+#door{
+    position: absolute;
+    width:100px;
+    height:500px;
+    background-color: lavender;
+    z-index: -1;
+    right:460px;
+    top: 60px;
+    transform: rotateY(150deg);
+    border-radius: 60px 60px 0px 0px;
+    border: black solid;
+    border-bottom:transparent
+
+}
+#right-door{
+    width: 200px;
+    height: 500px;
+    background-color: rgb(184, 184, 245);
+    position:absolute;
+    right: 26px;
+    border-radius: 60px 60px 0px 0px;
+    transform: rotateY(-112deg);
+    border: black solid;
+    border-bottom: transparent;
+
+}
+#alfombra{
+    width: 150px;
+    height: 180px;
+    background-color:palegreen;
+    position: absolute;
+    top: 450px;
+    left: 350px;
+    transform: rotateX(70deg);
+    border-radius: 1em;
+    border: black solid;
 }
 
 #living{
@@ -64,8 +171,155 @@ div{
 #lisa-room{
     grid-row: 1;
     grid-column: 4;
+    background-color: rgb(255, 133, 174);
+    perspective: 425px;
 }
+#pisolisa{
+    width: 70%;
+      height: 40%;
+      position: absolute;
+       bottom:0px;
+      right: 0px;
+      left: 200px;
+      background-color:rgb(3, 102, 89);
+      transform: rotateX(75deg);
+      border: black solid;
+      border-bottom: transparent;
+}
+#ventana{
+    width:300px;
+    height: 200px;
+    background-color:peachpuff;
+    position: absolute;
+    right:30%;
+    top:23%;
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
 
+}
+#ventana *{
+ width:128px ;
+ height:170px ;
+ background-color: turquoise;
+}
+#mesita{
+    width: 200px;
+    height: 500px;
+    
+    display:flex;
+    flex-direction: column;
+    position: absolute;
+    left:300px;
+    perspective:200px;
+}
+#borde-espejo{
+    width: 150px;
+    height: 250px;
+    background-color: teal;
+    border-radius: 12em;}
+
+#espejo{
+    width: 120px;
+    height:220px ;
+    background-color: lightblue;
+    border-radius:10em
+}
+#mesa{
+    width: 200px;
+    height: 100px;
+    background-color: orangered;
+    position: relative;
+    bottom:50px;
+    transform: rotateX(83deg);
+
+}
+#cajones{
+    position: relative;
+    bottom:84px;
+    width: 230px;
+    height:100px ;
+    background-color: palegreen;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+#cajones>#cajon{
+    width: 80px;
+    height: 30px;
+    border: black solid;
+}
+.tirador{
+    width: 4px;
+    height: 4px;
+    background-color: red;
+    border-radius:50px;
+    border: black solid;
+}
+#cama{
+    width: 43%;
+    height:50%;
+   
+    position: absolute;
+    right:110px;
+    top: 300px;
+    -ms-perspective-origin-x:100px;
+}
+#lado-central{
+    width: 360px;
+    height: 170px;
+    background-color: peru;
+    transform: rotateX(70deg);
+    position:absolute;
+    bottom:105px;
+    right:120px
+}
+#lado-izquierdo{
+        width:150px;
+        height:60px;
+        background-color: peru;
+        transform: rotate3d(-1,-5,1,90deg);
+        border: black solid;
+        position: absolute;
+        right:400px
+      
+        
+}
+#lado-frontal{
+    width:412px;
+    height: 65px;
+    background-color: peru;
+    border: black solid;
+    top:62px;
+    left:44px;
+    transform:rotateX(-23deg)
+
+}
+#almohada{
+    width: 88px;
+    height:140px;
+    background-color:palegoldenrod;
+    transform:rotateX(70deg);
+    position: absolute;
+    bottom:120px;
+    left:120px;
+    border-radius: 1em;
+
+}
+#cabecera{
+    width:210px;
+        height:120px;
+        background-color:violet;
+        border-radius: 5em 5em 0em 0em;
+        transform: rotate3d(-1,-6,0,106deg);
+        border: black solid;
+        position: absolute;
+        left:342px;
+        bottom: 192px;
+
+}
 #maggie-room{
     grid-row: 2;
     grid-column: 4;
