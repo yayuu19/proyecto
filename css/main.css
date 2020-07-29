@@ -11,9 +11,10 @@ main{
 
 body{
     margin: 0;
+    font-family: 'Press Start 2P', cursive;
 }
 
-div{
+.slides{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,62 +22,156 @@ div{
     height: 100vh;
 }
 
+/* -------------------------------------------------------- */
+
 #intro{
     grid-row: 3;
     grid-column: 1;
     background-image: linear-gradient(to bottom, rgb(57, 84, 202),  skyblue);
-    position: relative;
+    width: 100vw;
+    overflow: hidden;
 }
 
-.cloud{
+.l-clouds{
     position: absolute;
-    width: 70%;
+    width: 50%;
+    left: 0;
+    z-index: 0;
+    animation-name: cloudMovLeft;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+}
+
+.r-clouds{
+    position: absolute;
+    width: 50%;
+    right: 0;
+    z-index: 0;
+    animation-name: cloudMovRight;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
 }
 
 #cloud1{
-    left: 0;
-    z-index: 2;
-    animation-name: cloudMovement;
-    animation-duration: 4s;
-}
-
-@keyframes cloudMovement{
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(-10em);
-    }
-
+    top: 0%;
+    right: 20%
 }
 
 #cloud2{
-    right: 0;
-    transform: translateX(-10em) 4s;
+    top: 40%;
+    left: 60%;
+    width: 30%;
+}
+
+#cloud3{
+    top: 0%;
+    left: 20%;
+}
+
+#cloud4{
+    top: 20%;
+    left: 0%;
+}
+
+#cloud5{
+    top: 50%;
+    right: 0%
+}
+
+@keyframes cloudMovLeft{
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        z-index: 2;
+    }
+    100% {
+        transform: translateX(-20em);
+        z-index: 0;
+    }
+}
+
+@keyframes cloudMovRight{
+    0% {
+        transform: translateX(0);
+    }
+    45% {
+        z-index: 2;
+    }
+    100% {
+        transform: translateX(20em);
+        z-index: 0;
+    }
 }
 
 #title{
-    width: 50%;
+    position: absolute;
+    top: 10%;
+    width: 35%;
     z-index: 1;
-    animation-name: titleMovement;
-    animation-duration: 4s;
-    animation-delay: 1s;
+    animation: titleMov 5s;
 }
 
-@keyframes titleMovement{
+@keyframes titleMov{
     0% {
-        transform: scale(1);
+        transform: scale(0);
     }
 
     100% {
-        transform: scale(1.2);
+        transform: scale(1);
     }
 }
+
+#intro article{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    bottom: 20%;
+    z-index: 3;
+    padding: 2%;
+}
+
+#intro article p{
+    width: 50%;
+    color: rgb(0, 0, 0);
+}
+
+#intro button{
+    background-color: rgb(185, 38, 2);
+    padding: 30px 25px;
+    border-radius: 50%;
+}
+
+button>a{
+    display: inherit;
+    align-items: center;
+    color: white;
+}
+
+#homer-running{
+    position: absolute;
+    left: 0;
+    bottom: 10%;
+    z-index: 4;
+}
+
+#maggie-crying{
+    position: absolute;
+    width: 10%;
+    right: 5%;
+    bottom: 10%;
+    z-index: 4;
+}
+
+/* -------------------------------------------------------- */
 
 #entry{
     grid-row: 3;
     grid-column: 2;
+    background-color: red;
 }
 
 #hall{
@@ -134,17 +229,19 @@ div{
 .left-arrow{
     height: fit-content;
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 20px;
     cursor: pointer;
+    z-index: 5;
 }
 
 .right-arrow{
     height: fit-content;
     position: absolute;
     right: 20px;
-    top: 50%;
+    top: 45%;
     cursor: pointer;
+    z-index: 5;
 }
 
 .bottom-arrow{
@@ -152,6 +249,7 @@ div{
     position: absolute;
     bottom: 2%;
     cursor: pointer;
+    z-index: 5;
 }
 
 .top-arrow{
@@ -159,12 +257,13 @@ div{
     position: absolute;
     top: 2%;
     cursor: pointer;
+    z-index: 5;
 }
 
 .left-arrow a, .right-arrow a, .bottom-arrow a, .top-arrow a{
     width: inherit;
     height: inherit;
-    z-index: 1000;
+    z-index: 5;
 }
  
 

@@ -4,34 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buscando a Maggie</title>
+    <link rel="shortcut icon" href="img/maggie-icon.jpg">
     <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body scroll="no" style="overflow: hidden">
+    <!-- <audio src="audio.ogg" autoplay loop></audio> -->
+
     <main>
-        <div id="intro">
-            <div class="right-arrow">
-                <a href="#entry">
-                    <img src="https://img.icons8.com/plasticine/100/000000/circled-chevron-right.png"/>
-                </a>
+        <div id="intro" class="slides">
+                <img src="img/clouds/6.png" alt="cloud1" id="cloud1" class="r-clouds" class="clouds">
+                <img src="img/clouds/7.png" alt="cloud" id="cloud2" class="l-clouds" class="clouds">
+                <img src="img/clouds/cloud2.png" alt="cloud" id="cloud3" class="l-clouds" class="clouds">
+                <img src="img/clouds/8.png" alt="cloud" id="cloud4" class="l-clouds" class="clouds">
+                <img src="img/clouds/7.png" alt="cloud2" id="cloud5" class="r-clouds" class="clouds">
+            
+                <img src="img/intro/simpsons-title.png" alt="title" id="title">
+
+                <img src="img/intro/homer-running.gif" alt="homer" id="homer-running">
+
+                <article>            
+                    <p>Bienvenido/a a <b>¡Buscando a Maggie! </b> En este episodio la pequeña Maggie desapareció y Homero está desesperado por encontrarla. Ayudalo siguiendo las pistas que vas a encontrar en toda la casa al pasar el cursor por algún objeto. Buena suerte!</p>
+                    <button> <a href="#entry">Start</a></button>    
+                </article>
             </div>
-                <img src="img/nube.png" alt="cloud1" id="cloud1" class="cloud">
-                <img src="img/nube.png" alt="cloud2" id="cloud2" class="cloud">
-                <img src="img/simpsons-title.png" alt="title" id="title">
-        </div>
-        <div id="entry">
+        <div id="entry" class="slides">
             <h2>Entrada</h2>
             <div class="top-arrow">
                 <a href="#hall">
                     <img src="https://img.icons8.com/plasticine/100/000000/circled-chevron-up.png"/>
                 </a>
             </div>
-            <div class="left-arrow">
+            <div class="left-arrow"> <!-- No tiene sentido volver? -->
                 <a href="#intro">
                     <img src="https://img.icons8.com/plasticine/100/000000/circled-chevron-left.png"/>
                 </a>
             </div>
         </div>
-        <div id="hall">
+        <div id="hall" class="slides">
             <h2>Hall</h2>
             <div class="top-arrow">
                 <a href="#hallway">
@@ -54,7 +64,7 @@
                 </a>
             </div>
         </div>
-        <div id="living">
+        <div id="living" class="slides">
             <h2>Living</h2>
             <div class="top-arrow">
                 <a href="#kitchen">
@@ -67,7 +77,7 @@
                 </a>
             </div>
         </div>
-        <div id="kitchen">
+        <div id="kitchen" class="slides">
             <h2>Cocina</h2>
             <div class="bottom-arrow">
                 <a href="#living">
@@ -75,7 +85,7 @@
                 </a>
             </div>
         </div>
-        <div id="dinning-room">
+        <div id="dinning-room" class="slides">
             <h2>Comedor</h2>
             <div class="left-arrow">
                 <a href="#hall">
@@ -83,7 +93,7 @@
                 </a>
             </div>
         </div>
-        <div id="hallway">
+        <div id="hallway" class="slides">
             <h2>Pasillo</h2>
             <div>
                 <h3>Puerta Maggie</h3>
@@ -105,7 +115,7 @@
                 </a>
             </div>
         </div>
-        <div id="lisa-room">
+        <div id="lisa-room" class="slides">
             <h2>Cuarto de Lisa</h2>
             <div class="left-arrow">
                 <a href="#bart-room">
@@ -118,7 +128,7 @@
                 </a>
             </div>
         </div>
-        <div id="bart-room">
+        <div id="bart-room" class="slides">
             <h2>Cuarto de Bart</h2>
             <div class="right-arrow">
                 <a href="#lisa-room">
@@ -131,20 +141,20 @@
                 </a>
             </div>
         </div>
-        <div id="maggie-room">
+        <div id="maggie-room" class="slides">
             <h2>Cuarto de Maggie</h2>
             <div class="top-arrow">
                 <a href="#lisa-room">
                     <img src="https://img.icons8.com/plasticine/100/000000/circled-chevron-up.png"/>
                 </a>
             </div>
-            <div class="bottom-arrow">
+            <div class="bottom-arrow"> <!--No creo que haga falta porque con el input podríamos ir al juego -->
                 <a href="#game">
                     <img src="https://img.icons8.com/plasticine/100/000000/circled-chevron-down.png"/>
                 </a>
             </div>
         </div>
-        <div id="game">
+        <div id="game" class="slides">
             <h2>Game</h2>
             <div class="left-arrow">
                 <a href="#end">
@@ -152,8 +162,9 @@
                 </a>
             </div>
         </div>
-        <div id="end">
+        <div id="end" class="slides">
             <h2>FELICIDADES, SALVASTE A MAGGIE DE LOS BICHOS &#x1F604;</h2>
+            <button> <a href="#intro">Volver a jugar</a></button>  
         </div>
 
         <script src="js/main.js"></script>
