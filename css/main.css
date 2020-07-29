@@ -192,6 +192,8 @@ button>a{
 #dinning-room{
     grid-row: 2;
     grid-column: 3;
+    background-image: url('../img/rooms/dining-room-edit2.jpg');
+    background-size: cover;
 }
 
 #hallway{
