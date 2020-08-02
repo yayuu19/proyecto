@@ -102,8 +102,8 @@ div{
 }
 
 #img_cushion{
-    width: 120px;
-    height: 120px;
+    width: 160px;
+    height: 160px;
     z-index: 2;
 }
 
@@ -163,8 +163,6 @@ div{
     border-bottom: 100px solid;
     position: absolute;
     left: 320px;
-    padding: 0;
-    margin: 0;
     top: 75px; 
     animation-fill-mode: both;
     animation-name: light_1;
@@ -172,12 +170,39 @@ div{
     animation-iteration-count: infinite;
 }
 
+.shoe{
+    position: absolute;
+}
+
+#shoe{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 350px;
+    bottom: 150px;
+
+}
+
+.shoe :hover{
+    animation-name: shoe_movement;
+    animation-duration: 4s;
+}
+
 @keyframes cushion_movement{
     from{
         transform: translateX(10px);
     }
     to{
-        transform: translateX(100px);
+        transform: translateX(130px);
+    }
+}
+
+@keyframes shoe_movement{
+    from{
+        transform: translateX(0px);
+    }
+    to{
+        transform: translateX(-130px);
     }
 }
 
