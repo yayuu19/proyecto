@@ -31,7 +31,7 @@ div{
     grid-row: 3;
     grid-column: 2;
 }
-
+/*ESTILOS DEL HALL*/
 #hall{
     width: 100vw;
     height: 100vh;
@@ -53,8 +53,8 @@ div{
       
         }
 
-#puertacentral{width: 150px;
-        height: 300px;
+#puertacentral{width: 170px;
+        height: 340px;
         border-radius: 50px 50px 0px 0px;
         position: absolute;
         left: 400px;
@@ -66,8 +66,126 @@ div{
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        transition: all 2s;
+        transition-timing-function: linear;
+        transform-origin: bottom right;
         
 }
+#puertacdentro{
+        width: 170px;
+        height: 340px;
+        border-radius: 50px 50px 0px 0px;
+        position: absolute;
+        left: 400px;
+        bottom: 200px;
+        z-index: 1;
+        background-color:rgba(44, 44, 172, 0.931);
+        border: black solid;
+        border-bottom: transparent;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        z-index: -1;
+}
+#armario{
+    width:150px;
+    height: 200px;
+    background-color: chocolate;
+    display:flex;
+    flex-direction:column;
+    justify-content: space-around;
+    border: black solid;
+
+}
+#armario *{
+    width: 150px;
+    height:20px;
+    background-color: darkgoldenrod;
+    border:black solid;
+    transition: 3s linear;
+
+}
+#estante3{
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+#bote1{
+    background-color: crimson;
+    width:10px;
+    height: 15px;
+    border-radius: 0px 0px 5px 5px;
+}
+#bote1:hover{
+    transform: translateX(-50px);
+}
+#estante2{
+   display:flex;
+   flex-direction: row;
+   justify-content: flex-start;
+   
+}
+#paleta{
+    width:40px;
+    height: 40px;
+    border:none;
+    background-color: transparent;
+    transform: rotateZ(80deg);
+}
+#paleta:hover{
+    transform: translateX(100px)rotateZ(80deg);
+}
+#lapiz{
+    width:40px;
+    height: 20px;
+    border:none
+}
+#lapiz:hover{
+    transform: translateX(-80px);
+}
+#estante5{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+#sombrero{
+    width:40px;
+    height: 40px;
+    border:none;
+    border-radius: 20px;
+    background-color: transparent;
+ 
+}
+#sombrero:hover{
+    transform: translateX(70px);
+}
+#pelota{
+    width:30px;
+    height: 22px;
+    border: none;
+    border-radius:10px;
+    z-index:2;
+    transition: 2s linear;
+    background-color: transparent;
+    
+}
+#pelota:hover{
+    transform: translateX(-50px);
+}
+#letra{
+    width:30px;
+    height: 22px;
+    border:none;
+    position:absolute;
+    background-color: transparent;
+}
+#letra h3{
+    border: none;
+    background-color: transparent;
+}
+/*#puertacentral:hover{
+ transform: rotateY(110deg);
+}*/
 #picaporte{
     width: 20px;
     height: 20px;
@@ -76,32 +194,64 @@ div{
     margin-left: 1em;
     border: black solid;
 }
+#picaporte:hover{
+    transform:scale(1.4) ;
+}
 #esc{
-    perspective: 110px;
-    position: absolute;
-    bottom: 100px;
-    right:330px;
-}
-#escalera{
-    width: 100px;
-    height: 450px;
-    z-index: 1;
-    transform: rotateX(7.5deg);
-    display: flex;
-    flex-direction: column;
-}
-.escalera>div:nth-child(2n){
-    background-color: rgb(149, 82, 226);
-    height:35.4px
-}
-.escalera>div:nth-child(odd){
-    background-color: rgb(173, 171, 255);
-    height:50.4px
-}
-#escalera *{
-    width: 250px;
-    border: black solid;
-}
+    perspective:300px;
+     position: absolute;
+     bottom: 80px;
+     right:268px;
+ }
+ #escalera{
+     width: 200px;
+     height: 420px;
+     z-index: 1;
+     transform: rotateX(23deg);
+     display: flex;
+     flex-direction: column;
+ }
+ .escalera>div:nth-child(2n){
+     background-color: rgb(149, 82, 226);
+     height:35.4px
+ }
+ .escalera>div:nth-child(odd){
+     background-color: rgb(173, 171, 255);
+     height:50.4px
+ }
+ #escalera *{
+     width: 200px;
+     border: black solid;}
+ 
+ 
+ 
+ #railing{
+     perspective: 100px;  
+     position: absolute;
+     bottom: 180px;
+     right:465px;
+ }
+ #baranda{
+     width: 30px;
+     height:300px;
+     background-color:rgb(150, 112, 255);
+   
+     transform: rotate3d(1,1,1,20deg);
+     border:black solid;
+     border-radius: 0px 0px 10px 10px;
+      z-index:2;
+ }
+ #sosten{
+     width:20px;
+     height:200px ;
+     background-color: rgb(150, 112, 255);
+     position: absolute;
+     top:520px;
+     right:40px;
+     border: black solid;
+     transform: rotateX(-4deg);
+   
+ }
 #left-door{
     perspective: 100px;
 }
@@ -132,17 +282,17 @@ div{
 
 }
 #alfombra{
-    width: 150px;
+    width: 170px;
     height: 180px;
-    background-color:palegreen;
-    position: absolute;
+    border: black solid; 
+    border-radius:1em ;
     top: 450px;
     left: 350px;
     transform: rotateX(70deg);
-    border-radius: 1em;
-    border: black solid;
+    position: absolute;
+    background-color: palegreen;
 }
-
+/*HASTA ACA LOS ESTILOS DEL HALL*/
 #living{
     grid-row: 2;
     grid-column: 1;
@@ -167,7 +317,7 @@ div{
     grid-row: 1;
     grid-column: 3;
 }
-
+/*ESTILOS DEL CUARTO DE LISA*/
 #lisa-room{
     grid-row: 1;
     grid-column: 4;
@@ -197,13 +347,70 @@ div{
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-around;
+  
 
 }
 #ventana *{
  width:128px ;
  height:170px ;
  background-color: turquoise;
+
+
 }
+#nube1{
+    width: 30px;
+    height: 10px;
+    right:90px;
+    bottom:140px;
+     position: absolute;
+    animation-name: nube1;
+    animation-timing-function: linear;
+    animation-duration: 11s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+     
+
+}
+#nube2{
+    width: 35px;
+    height: 20px;
+    right:90px;
+    bottom:110px;
+    position: absolute;
+    border-radius:100px;
+    animation-name: nube2;
+    animation-timing-function: linear;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+     
+}
+
+@keyframes nube1{
+    0%{
+     transform: translateX(80px);
+     opacity: 1;
+    }
+    50%{
+        transform: translateX(40px);
+        opacity:0
+    }
+    100%{
+        transform:translateX(0px);
+        opacity:1
+    }
+}
+@keyframes nube2{
+    0%{
+     transform: translateX(80px);
+     opacity: 1;
+    }
+    100%{
+     transform: rotateX(40px);
+     opacity: 0;
+    }
+}
+
 #mesita{
     width: 200px;
     height: 500px;
@@ -224,8 +431,12 @@ div{
     width: 120px;
     height:220px ;
     background-color: lightblue;
-    border-radius:10em
+    border-radius:10em;
+    transition:4s linear;
+    
 }
+
+
 #mesa{
     width: 200px;
     height: 100px;
@@ -250,18 +461,47 @@ div{
     width: 80px;
     height: 30px;
     border: black solid;
+    background-color: rgb(93, 197, 93);
+}
+#boton{
+    width: 4px;
+    height: 4px;
+    background-color: rgb(255, 115, 0);
+    border-radius:50px;
+    border: black solid;
+    position: absolute;
+}
+.letraa{
+    position:absolute;
+    bottom:100px;
+    animation:letra 5s linear;
+    border:none
+}
+@keyframes letra{
+    0%{
+        transform:translateY(-20px);opacity:1
+    }
+    50%{
+        transform:translateY(-40px);opacity:1
+    }
+    100%{
+        transform:translateY(-60px);
+        opacity:0
+    }
+}
+.tirador:hover{
+    transform:scale(1.5)
 }
 .tirador{
     width: 4px;
     height: 4px;
-    background-color: red;
+    background-color: rgb(255, 115, 0);
     border-radius:50px;
     border: black solid;
 }
 #cama{
     width: 43%;
     height:50%;
-   
     position: absolute;
     right:110px;
     top: 300px;
@@ -273,27 +513,29 @@ div{
     background-color: peru;
     transform: rotateX(70deg);
     position:absolute;
-    bottom:105px;
-    right:120px
+    bottom:100px;
+    right:112px
 }
 #lado-izquierdo{
         width:150px;
         height:60px;
         background-color: peru;
         transform: rotate3d(-1,-5,1,90deg);
-        border: black solid;
         position: absolute;
-        right:400px
+        right:400px;
+        transition:all 3s;
+        transition-timing-function: linear;
+        transform-style: preserve-3d;
+        }
       
-        
-}
+
 #lado-frontal{
-    width:412px;
+    width:428px;
     height: 65px;
     background-color: peru;
-    border: black solid;
+   
     top:62px;
-    left:44px;
+    left:52px;
     transform:rotateX(-23deg)
 
 }
@@ -316,10 +558,33 @@ div{
         transform: rotate3d(-1,-6,0,106deg);
         border: black solid;
         position: absolute;
-        left:342px;
-        bottom: 192px;
+        left:354px;
+        bottom: 184px;
 
 }
+#lisa{
+    width: 200px;
+    height:200px;
+    background:transparent;
+    position: absolute;
+    bottom:155px;
+    right:85px;
+    animation: lisa 25s linear;
+}
+@keyframes lisa{
+    from{
+        background-image: url("https://www.gifmania.com/Gif-Animados-Dibujos-Animados/Imagenes-FOX/Los-Simpson/Lisa-Simpson/lisa-simpson4-33473.gif");
+        background-repeat:no-repeat;
+        background-size:contain
+        
+        
+    }
+    to{
+        background-image: none;
+         
+    }
+}
+/*HASTA ACA LOS ESTILOS DEL CUARTO DE LISA*/
 #maggie-room{
     grid-row: 2;
     grid-column: 4;
