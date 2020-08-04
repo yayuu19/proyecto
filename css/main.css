@@ -33,6 +33,15 @@ main>div {
     background-color: #d07e8a;
 }
 
+/*BART'S ROOM*/
+
+#bart-room {
+    background-image: url(../img/bart-bedroom.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    background-color: #f5a0b3;
+}
 
 /*ICONS*/
 
@@ -84,7 +93,7 @@ main>div {
     text-transform: uppercase;
 } 
 
-button {
+#ending {
     background: #426de4;
     padding: 20px;
     border-radius: 5px;
@@ -93,13 +102,28 @@ button {
     transition: all 0.4s ease 0s;
 }
 
-button:hover {
+#ending:hover {
     background: rgb(189, 180, 102);
     letter-spacing: 1px;
     -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
     -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
     box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
     transition: all 0.4s ease 0s;
+}
+
+#letter {
+    position: absolute;
+    left: 215px;
+    bottom: 130px;
+    background-color: #c2b0ed;
+    width: 20px;
+    height: 20px;
+    padding: 2px;
+    border-color: #c2b0ed;
+}
+
+#letter:hover {
+    border-color: black;
 }
 
 /*CODE*/
