@@ -11,3 +11,10 @@
        let puerta = document.getElementById("puertacentral")
         puerta.addEventListener("click",function(){puerta.style.transform = "rotateY(110deg)"} );
       }())
+location.href='https://yayuu19.github.io/startavina-desafio1/index#intro';
+
+var letter = "H"
+
+ function show(letter) {
+    document.getElementById("letter").innerHTML = letter
+}

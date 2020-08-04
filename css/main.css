@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Zetta&display=swap');
+
+
 html {
     margin: 0;
     scroll-behavior: smooth;
@@ -386,16 +389,61 @@ h1{
     grid-column: 3;
 }
 
+/*HALLWAY*/
+
 #hallway{
     grid-row: 1;
     grid-column: 2;
+    background-image: url(../img/hallway.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60%;
+    background-color: #d07e8a;
 }
+
+input {
+    width: 80px;
+    font-family: 'Lexend Zetta', sans-serif;
+    text-align: center;
+    border-radius: 4px;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*BART'S ROOM*/
 
 #bart-room{
     grid-row: 1;
     grid-column: 3;
+    background-image: url(../img/bart-bedroom.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    background-color: #f5a0b3;
 }
-/*ESTILOS DEL CUARTO DE LISA*/
+
+
+#letter {
+    position: absolute;
+    left: 215px;
+    bottom: 130px;
+    background-color: #c2b0ed;
+    width: 20px;
+    height: 20px;
+    padding: 2px;
+    border-color: #c2b0ed;
+}
+
+#letter:hover {
+    border-color: black;
+}
+
+/*LISA'S ROOM*/
+
 #lisa-room{
     grid-row: 1;
     grid-column: 4;
@@ -771,3 +819,5 @@ h1{
 }
  
  
+
+

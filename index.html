@@ -139,16 +139,14 @@
             </div>
         </div>
         <div id="hallway">
-            <h2>Pasillo</h2>
-            <div>
-                <h3>Puerta Maggie</h3>
-            </div>
-            <div>
-                <h3>Puerta Bart</h3>
-            </div>
-            <div>
-                <h3>Puerta Lisa</h3>
-            </div>
+            <form action="#maggie-room" id="form">
+                <label>
+                    <input type="text" name="code" size="20" id="code" required pattern="1234">
+                </label>
+                <label>
+                    <input type="submit" value="check" id="check">
+                </label>
+            </form>
             <div class="right-arrow">
                 <a href="#bart-room">
                     <img src="https://img.icons8.com/plasticine/100/000000/circled-chevron-right.png"/>
@@ -228,7 +226,7 @@
         </div>
 
         <div id="bart-room">
-            <h2>Cuarto de Bart</h2>
+            <button id="letter" ondblclick="show(letter)"></button>
             <div class="right-arrow">
                 <a href="#lisa-room">
                     <img src="https://img.icons8.com/plasticine/100/000000/circled-chevron-right.png"/>
