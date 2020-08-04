@@ -9,17 +9,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body scroll="no" style="overflow: hidden">
-    <!-- <audio src="audio.ogg" autoplay loop></audio> -->
-
     <main>
         <div id="intro" class="slides">
+             <audio controls id="audio" loop>
+                <source src="audio/background-music.mp3" type="audio/mp3">
+                    <p>If audio does not start, the <audio> HTML element is not supported in your browser.</p>
+            </audio>
                 <img src="img/clouds/6.png" alt="cloud1" id="cloud1" class="r-clouds" class="clouds">
                 <img src="img/clouds/7.png" alt="cloud" id="cloud2" class="l-clouds" class="clouds">
                 <img src="img/clouds/cloud2.png" alt="cloud" id="cloud3" class="l-clouds" class="clouds">
                 <img src="img/clouds/8.png" alt="cloud" id="cloud4" class="l-clouds" class="clouds">
                 <img src="img/clouds/7.png" alt="cloud2" id="cloud5" class="r-clouds" class="clouds">
             
-                <img src="img/intro/simpsons-title.png" alt="title" id="title">
+                <img src="img/intro/simpsons-title-green.png" alt="title" id="title">
 
                 <img src="img/intro/homer-running.gif" alt="homer" id="homer-running">
 
@@ -86,20 +88,30 @@
             </div>
         </div>
         <div id="dining-room" class="slides" >
-            <!-- <h2>Comedor</h2> -->
             <div class="left-arrow">
                 <a href="#hall">
                     <img src="https://img.icons8.com/plasticine/100/000000/circled-chevron-left.png"/>
                 </a>
             </div>
+
             <img src="img/dining-room/carpet.png" alt="" id="carpet">
             <img src="img/dining-room/painting.png" alt="" id="painting">
             <img src="img/dining-room/teapot-lid.png" alt="" id="teapot-lid">
             <img src="img/dining-room/glass.png" alt="" id="glass">
             <img src="img/dining-room/chicken.png" alt="" id="chicken">
             <img src="img/dining-room/curtain.png" alt="" id="curtain">
-            <img src="img/dining-room/light.png" alt="" id="light">
-            <p>HINT</p>
+            <img src="img/dining-room/switcher.png" alt="" id="switcher">
+
+            <article>Cuanto más intensa, menos se ve</article>
+
+            <div id="darkness" class="">
+                <span id="close">            
+                    <img src="img/dining-room/switcher.png" alt="">
+                </span>
+            </div>
+
+            <h1 id="hint">A</h1>
+
         </div>
         <div id="hallway" class="slides">
             <h2>Pasillo</h2>

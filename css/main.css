@@ -14,6 +14,14 @@ body{
     font-family: 'Press Start 2P', cursive;
 }
 
+#audio{
+    display: flex;
+    justify-self: center;
+    align-self: flex-end;
+    z-index: 10;
+    background-color: transparent;
+}
+
 .slides{
     display: flex;
     justify-content: center;
@@ -141,14 +149,20 @@ body{
 
 #intro button{
     background-color: rgb(185, 38, 2);
-    padding: 30px 25px;
+    padding: 40px 15px;
     border-radius: 50%;
+    font-family: 'Press Start 2P', cursive;
+    border-width: 7px;
+    border-top-color: rgb(150, 144, 144);
 }
 
 button>a{
     display: inherit;
     align-items: center;
+    text-transform: uppercase;
+    text-shadow: 2px 3px grey;
     color: white;
+    text-decoration: none;
 }
 
 #homer-running{
@@ -198,16 +212,17 @@ button>a{
     overflow: hidden;
 }
 
-#dining-room p{
+#dining-room article{
     position: absolute;
-    color: red;
-    bottom: -15px;
+    color: black;
+    bottom: 0;
     z-index: 0;
 }
 
 #dining-room>img{
-    z-index: 1;
+    z-index: 2;
 }
+
 #carpet{
     width: 60%;
     position: absolute;
@@ -263,17 +278,6 @@ button>a{
     left: 435px;
 }
 
-#glass:hover{
-    transform-origin: bottom;
-    transform: rotateZ(90deg) translate(150px);
-    transition-timing-function: ease-in;
-    transition-duration: 2s;
-}
-
-#glass:hover::after{
-    transform: translate(150px);
-}
-
 #curtain{
     width: 8%;
     position: absolute;
@@ -281,23 +285,35 @@ button>a{
     right: 0px;
 }
 
-#curtain:hover{
-    transform: translateX(200px);
-    transition-duration: 1s;
-    transition-timing-function: ease-in-out;
-}
-
-#light{
-    width: 1.5%;
+#switcher{
+    width: 15px;
     position: absolute;
     left: 125px;
-    top: 280px;
+    top: 285px;
 }
 
-#light:hover{
-    transform: translateY(15px);
-    transition-duration: 1s;
-    transition-timing-function: ease;
+#close{
+    display: none;
+    position: absolute;
+    left: 125px;
+    top: 295px;
+}
+
+.off{
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.76);
+    z-index: 3;
+}
+
+#hint{
+    position: absolute;
+    right: 20px;
+    top: 120px;
+    z-index: 1;
+    opacity: 0.8;
+    color: skyblue;
 }
 
 /* ----------------------------HALLWAY---------------------------- */
