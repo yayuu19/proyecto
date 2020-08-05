@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buscando a Maggie</title>
-    <link rel="shortcut icon" href="img/maggie-icon.jpg">
+    <link rel="shortcut icon" href="img/intro/maggie-icon.png">
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
@@ -15,19 +15,17 @@
                 <source src="audio/background-music.mp3" type="audio/mp3">
                     <p>If audio does not start, the <audio> HTML element is not supported in your browser.</p>
             </audio>
-                <img src="img/clouds/6.png" alt="cloud1" id="cloud1" class="r-clouds" class="clouds">
-                <img src="img/clouds/7.png" alt="cloud" id="cloud2" class="l-clouds" class="clouds">
-                <img src="img/clouds/cloud2.png" alt="cloud" id="cloud3" class="l-clouds" class="clouds">
-                <img src="img/clouds/8.png" alt="cloud" id="cloud4" class="l-clouds" class="clouds">
-                <img src="img/clouds/7.png" alt="cloud2" id="cloud5" class="r-clouds" class="clouds">
-            
+                <img src="img/intro/clouds/1.png" alt="cloud1" id="cloud1" class="r-clouds" class="clouds">
+                <img src="img/intro/clouds/2.png" alt="cloud" id="cloud2" class="l-clouds" class="clouds">
+                <img src="img/intro/clouds/3.png" alt="cloud" id="cloud3" class="l-clouds" class="clouds">
+                <img src="img/intro/clouds/4.png" alt="cloud" id="cloud4" class="l-clouds" class="clouds">
+                <img src="img/intro/clouds/2.png" alt="cloud2" id="cloud5" class="r-clouds" class="clouds">
                 <img src="img/intro/simpsons-title-green.png" alt="title" id="title">
-
-                <img src="img/intro/homer-running.gif" alt="homer" id="homer-running">
-
-                <article>            
-                    <p>Bienvenido/a a <b>¡Buscando a Maggie! </b> En este episodio la pequeña Maggie desapareció y Homero está desesperado por encontrarla. Ayudalo siguiendo las pistas que vas a encontrar en toda la casa al pasar el cursor por algún objeto. Buena suerte!</p>
-                    <button> <a href="#entry">Start</a></button>    
+                <img src="img/intro/kangkodos.png" alt="aliens" id="aliens">
+                <img src="img/intro/homer-running.png" alt="homer" id="homer-running">
+                <article>
+                    <button id="start"> <a href="#entry">START</a></button>                
+                    <p>Bienvenido a ¡Buscando a Maggie! En este episodio la pequeña Maggie está desaparecida y Homero quiere encontrarla. Ayudalo siguiendo las pistas que vas a encontrar en toda la casa al pasar el cursor o clickear en algún objeto. ¡Buena suerte!</p>
                 </article>
             </div>
         <div id="entry" class="slides">
@@ -37,7 +35,7 @@
                     <img src="https://img.icons8.com/plasticine/100/000000/circled-chevron-up.png"/>
                 </a>
             </div>
-            <div class="left-arrow"> <!-- No tiene sentido volver? -->
+            <div class="left-arrow">
                 <a href="#intro">
                     <img src="https://img.icons8.com/plasticine/100/000000/circled-chevron-left.png"/>
                 </a>
@@ -94,24 +92,21 @@
                 </a>
             </div>
 
-            <img src="img/dining-room/carpet.png" alt="" id="carpet">
-            <img src="img/dining-room/painting.png" alt="" id="painting">
-            <img src="img/dining-room/teapot-lid.png" alt="" id="teapot-lid">
-            <img src="img/dining-room/glass.png" alt="" id="glass">
-            <img src="img/dining-room/chicken.png" alt="" id="chicken">
-            <img src="img/dining-room/curtain.png" alt="" id="curtain">
-            <img src="img/dining-room/switcher.png" alt="" id="switcher">
+            <img src="img/dining-room/carpet.png" alt="carpet" id="carpet">
+            <img src="img/dining-room/painting.png" alt="painting" id="painting">
+            <img src="img/dining-room/teapot-lid.png" alt="teapot-lid" id="teapot-lid">
+            <img src="img/dining-room/glass.png" alt="glass" id="glass">
+            <img src="img/dining-room/chicken.png" alt="chicken" id="chicken">
+            <img src="img/dining-room/curtain.png" alt="curtain" id="curtain">
+            <img src="img/dining-room/switcher.png" alt="switcher" id="switcher-on">
 
-            <article>Cuanto más intensa, menos se ve</article>
-
-            <div id="darkness" class="">
-                <span id="close">            
-                    <img src="img/dining-room/switcher.png" alt="">
+            <article>Cuanto más oscuro, mejor se ve</article>
+            <h1 id="hint" class="">H</h1>
+            <div id="darkness">
+                <span id="switcher-off">            
+                    <img src="img/dining-room/switcher.png" alt="switcher">
                 </span>
             </div>
-
-            <h1 id="hint">A</h1>
-
         </div>
         <div id="hallway" class="slides">
             <h2>Pasillo</h2>

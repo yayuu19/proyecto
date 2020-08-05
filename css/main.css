@@ -14,14 +14,6 @@ body{
     font-family: 'Press Start 2P', cursive;
 }
 
-#audio{
-    display: flex;
-    justify-self: center;
-    align-self: flex-end;
-    z-index: 10;
-    background-color: transparent;
-}
-
 .slides{
     display: flex;
     justify-content: center;
@@ -35,30 +27,13 @@ body{
 #intro{
     grid-row: 3;
     grid-column: 1;
-    background-image: linear-gradient(to bottom, rgb(57, 84, 202),  skyblue);
+    background-image: linear-gradient(to bottom, rgb(40, 47, 102),  rgb(50, 75, 143));
     width: 100vw;
     overflow: hidden;
 }
 
-.l-clouds{
+#intro audio, .l-clouds, .r-clouds, article, #title, #homer-running, #aliens{
     position: absolute;
-    width: 50%;
-    left: 0;
-    z-index: 0;
-    animation-name: cloudMovLeft;
-    animation-duration: 4s;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-out;
-}
-
-.r-clouds{
-    position: absolute;
-    width: 50%;
-    right: 0;
-    z-index: 0;
-    animation-name: cloudMovRight;
-    animation-duration: 4s;
-    animation-fill-mode: forwards;
 }
 
 #cloud1{
@@ -87,97 +62,105 @@ body{
     right: 0%
 }
 
-@keyframes cloudMovLeft{
-    0% {
-        transform: translateX(0);
-    }
-    25% {
-        z-index: 2;
-    }
-    100% {
-        transform: translateX(-20em);
-        z-index: 0;
-    }
+.l-clouds{
+    width: 50%;
+    left: 0;
+    animation: toLeft 6s ease-out forwards;
+    z-index: 1;
 }
 
-@keyframes cloudMovRight{
-    0% {
-        transform: translateX(0);
-    }
-    45% {
-        z-index: 2;
-    }
-    100% {
-        transform: translateX(20em);
-        z-index: 0;
-    }
+.r-clouds{
+    width: 50%;
+    right: 0;
+    animation: toRight 6s ease-out forwards;
+    z-index: 1;
+}
+
+@keyframes toLeft{
+    0% {transform: translateX(0);}
+    25% {z-index: 3;}
+    100% {transform: translateX(-20em); z-index: 1;}
+}
+
+@keyframes toRight{
+    0% {transform: translateX(0);}
+    45% {z-index: 3;}
+    100% {transform: translateX(20em); z-index: 1;}
 }
 
 #title{
-    position: absolute;
-    top: 10%;
     width: 35%;
-    z-index: 1;
-    animation: titleMov 5s;
+    top: 10%;
+    animation: titleMov 8s;
+    z-index: 2;
 }
 
 @keyframes titleMov{
-    0% {
-        transform: scale(0);
-    }
-
-    100% {
-        transform: scale(1);
-    }
+    0% {transform: scale(0);}
+    100% {transform: scale(1);}
 }
 
 #intro article{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     background-color: rgba(255, 255, 255, 0.5);
-    position: absolute;
-    bottom: 20%;
-    z-index: 3;
     padding: 2%;
+    bottom: 20%;
+    z-index: 4;
 }
 
 #intro article p{
+    margin-left: -200px;
     width: 50%;
-    color: rgb(0, 0, 0);
+    color: black;
+    text-shadow: 1px 1px 5px yellow;
+    text-align: center;
 }
 
-#intro button{
+#homer-running{
+    width: 10%;
+    right: 150px;
+    bottom: 22%;
+    z-index: 5;
+}
+
+#aliens{
+    width: 20%;
+    left: 0;
+    top: 80px;
+    animation: run 8s ease forwards;
+    animation-delay: 3s;
+    z-index: 1;
+}
+
+@keyframes run{
+    1% {transform: translate(0,-100px);}
+    25% {transform: translate(80px, 0);}
+    100% {transform: translate(800px,0px);}
+}
+
+#start{
+    margin-left: -250px;
     background-color: rgb(185, 38, 2);
     padding: 40px 15px;
     border-radius: 50%;
     font-family: 'Press Start 2P', cursive;
-    border-width: 7px;
+    border-width: 6px;
     border-top-color: rgb(150, 144, 144);
 }
 
-button>a{
+#start a{
     display: inherit;
     align-items: center;
-    text-transform: uppercase;
-    text-shadow: 2px 3px grey;
+    text-shadow: 2px 3px 1px black;
     color: white;
     text-decoration: none;
 }
 
-#homer-running{
-    position: absolute;
-    left: 0;
-    bottom: 10%;
-    z-index: 4;
-}
-
-#maggie-crying{
-    position: absolute;
-    width: 10%;
-    right: 5%;
-    bottom: 10%;
-    z-index: 4;
+audio{
+    bottom: 20px;
+    z-index: 5;
 }
 
 /* ----------------------------ENTRY---------------------------- */
@@ -212,20 +195,30 @@ button>a{
     overflow: hidden;
 }
 
-#dining-room article{
+#dining-room article, #hint, #switcher-off{
     position: absolute;
-    color: black;
-    bottom: 0;
+}
+
+#dining-room article{
+    color: rgb(0, 0, 0);
+    bottom: 4px;
     z-index: 0;
 }
 
+#hint{
+    right: 20px;
+    top: 120px;
+    color: rgba(104, 220, 255, 0.829);
+    z-index: 1;
+}
+
 #dining-room>img{
+    position: absolute;
     z-index: 2;
 }
 
 #carpet{
     width: 60%;
-    position: absolute;
     bottom: -35px;
     left: 290px;
 }
@@ -237,9 +230,8 @@ button>a{
 
 #teapot-lid{
     width: 40px;
-    position: absolute;
-    right: 448px;
     top: 235px;
+    right: 448px;
 }
 
 #teapot-lid:hover{
@@ -249,7 +241,6 @@ button>a{
 
 #painting{
     width: 30px;
-    position: absolute;
     top: 195px;
     right: 690px;
 }
@@ -261,7 +252,6 @@ button>a{
 
 #chicken{
     width: 12%;
-    position: absolute;
     top: 325px;
     right: 600px;
 }
@@ -273,47 +263,33 @@ button>a{
 
 #glass{
     width: 2%;
-    position: absolute;
     top: 360px;
     left: 435px;
 }
 
 #curtain{
     width: 8%;
-    position: absolute;
     top: 0px;
     right: 0px;
 }
 
-#switcher{
+#switcher-on{
     width: 15px;
-    position: absolute;
     left: 125px;
     top: 285px;
 }
 
-#close{
+#switcher-off{
     display: none;
-    position: absolute;
-    left: 125px;
     top: 295px;
+    left: 125px;
 }
 
-.off{
-    display: block;
+.lights-off{
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.76);
+    background-color: rgba(0, 0, 0, .6);
     z-index: 3;
-}
-
-#hint{
-    position: absolute;
-    right: 20px;
-    top: 120px;
-    z-index: 1;
-    opacity: 0.8;
-    color: skyblue;
 }
 
 /* ----------------------------HALLWAY---------------------------- */
