@@ -1,7 +1,9 @@
-var letter = "H"
+var letterC = "C"
 
- function show(letter) {
-    document.getElementById("letter").innerHTML = letter
+ function show(letterC) {
+    document.getElementById("letter").innerHTML = letterC
 }
 
-
+function notTrue(){
+    alert("No hay nada aquí\nSigue buscando");
+}

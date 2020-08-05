@@ -76,14 +76,6 @@
                 </div>
         </div>
         <div id="hallway">
-            <form action="#maggie-room" id="form">
-                <label>
-                    <input type="text" name="code" size="20" id="code" required pattern="1234">
-                </label>
-                <label>
-                    <input type="submit" value="check" id="check">
-                </label>
-            </form>
             <a href="#hall">
                 <i class="far fa-arrow-alt-circle-down"></i>
             </a>
@@ -108,7 +100,19 @@
         </div>
     </div>
     <div id="bart-room">
-        <button id="letter" ondblclick="show(letter)"></button>
+        <div class="form">
+            <form action="#maggie-room" id="form">
+                <label>
+                    <input type="text" name="code" size="20" id="code" required pattern="charles">
+                </label>
+                <label>
+                    <input type="submit" value="check" id="check">
+                </label>
+            </form>
+        </div>
+        <button id="false" ondblclick="notTrue()"></button>
+        <img src="img/pelota.png" alt="ball" id="ball">
+        <button id="letter" ondblclick="show(letterC)"></button>
         <a href="#hallway">
             <i class="far fa-arrow-alt-circle-left"></i>
         </a>
