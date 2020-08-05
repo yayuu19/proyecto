@@ -109,7 +109,7 @@ div{
 
 .cushion{
     position: absolute;
-    right: 240px;
+    right: 130px;
     size: 20px;
     z-index: 2;
 }
@@ -125,7 +125,7 @@ div{
     position: absolute;
     width: 70px;
     height: 70px;
-    right: 260px;
+    right: 170px;
     z-index: 1;
 }
 
@@ -163,7 +163,6 @@ div{
     border-left: 120px solid transparent;
     border-bottom: 100px solid;
     position: absolute;
-
     top: 15%; 
     animation-fill-mode: both;
     animation-name: light_1;
@@ -269,6 +268,7 @@ h1 span{
     border-left: 1px solid #000; 
 
     animation: typing 15s steps(225);
+    animation: blinkTextCursor 1s;
 }
 
 
@@ -341,12 +341,21 @@ h1 span{
     color: rgb(1, 1, 14);
     font-weight: 300;
     text-shadow: 1.5px 1.5px 0 yellow;
+    background-color: rgba(250, 250, 203, 0.5);
+    border-radius: 15px;
     text-align: center;
     position: absolute;
-    font-size: 45px;
+    font-size: 30px;
     top: 10px;
     animation: pulse 0.8s infinite;
 }
+
+#efect{
+    position: absolute;
+    width: 100vw;
+}
+
+
 
 @keyframes pulse{
     from{
