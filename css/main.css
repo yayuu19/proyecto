@@ -45,6 +45,7 @@ main>div {
     position: absolute;
     bottom: 50px;
     left: 480px;
+    z-index: 1;
 }
 
 #box3 {
@@ -65,9 +66,32 @@ main>div {
     font-family: 'Lexend Zetta', sans-serif;
 }
 
-#letterL:hover {
+#letterL:hover, #false1:hover, #false2:hover {
     color: #355d1e;
+    font-family: 'Lexend Zetta', sans-serif;
 }
+
+#false1 {
+    color: #dd9c4c;
+    font-family: 'Lexend Zetta', sans-serif;
+    position: absolute;
+    bottom: 60px;
+    left: 520px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+#false2 {
+    color: #dd9c4c;
+    font-family: 'Lexend Zetta', sans-serif;
+    position: absolute;
+    bottom: 140px;
+    left: 520px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+
 
 /*BART'S ROOM*/
 
@@ -94,7 +118,6 @@ main>div {
     background-color: #c2b0ed;
     width: 20px;
     height: 20px;
-    border: 0;
     border-color: #c2b0ed;
 }
 
@@ -129,13 +152,14 @@ input {
     padding: 2px;
     font-size: 10px;
     background-color: black;
-    border: 0;
     border-radius: 10px;
+    border: 0;
     color: #fff;
+    cursor: pointer;
 }
 
 #letter:hover {
-    cursor: pointer;
+    border: solid #fff 2px;
 }
 
 /*ICONS*/
