@@ -13,9 +13,62 @@
     --kang-total-size: calc(var(--bullseye-size) + var(--bullseye-shadow-size) * 2);
     --kang-color: lime; 
     --total-kang: 8;
-    --kang-animation-duration: 4.7s;
+    --kang-animation-duration: 2.7s;
     --score-delay: calc(var(--kang-animation-duration) * var(--total-kang));
       }
+
+/*inicio*/
+#start{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    color: red;
+    text-shadow: 2px 2px 0 lime;
+    background-image: url(../img/skygif.gif);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 100px;
+    text-align: center;
+    text-decoration: none;
+
+}
+
+#result{
+    display: block;
+    position: absolute;
+    bottom: 20px;
+    font-size: 100px;
+    text-align: center;
+    text-decoration: none;
+    background: yellow;
+    color: black;
+    font-size: 40px;
+    border-radius: 10px;
+    font-weight: 200;
+    animation: result 20s forwards;
+
+}
+
+#stage:target #start{
+    display: none;
+}
+
+.start-text{
+    animation: pulse 0.5s ease-out infinite;
+}
+
+#stage:target .kang {
+    animation-name: kang-movement;
+}
+
+#stage:target #score {
+    animation: score-end 0.4s ease-in-out var(--score-delay) forwards;
+}
+
+
 
 *:after {
     box-sizing: border-box;
@@ -53,10 +106,10 @@
     left: 0;
     right: 0;
     font-weight: 500;
-    color: darkseagreen;
+    color: red;
     text-shadow: 2px 2px 0px blue;
     pointer-events: none;
-    font-size: 40px;
+    font-size: 75px;
     animation: score-end 0.4s ease-in-out var(--score-delay) forwards;
   }
 
@@ -75,13 +128,12 @@ body {
   }
   
 .kang {
-    --points: var(--kang-points)
+    --points: var(--kang-points);
     margin: 0 20px 20px 0;
-    display: inline-block;
     position: absolute;
+    opacity: 0;
     top: calc(-1 * var(--bullseye-total-size));
     animation-name: kang-movement;
-    animation-fill-mode: forwards;
     animation-timing-function: ease-out;
     animation-duration: var(--kang-animation-duration);
     animation-delay: calc(var(--kang-animation-duration) * (var(--index) - 1));
@@ -141,13 +193,13 @@ body {
 .kang:before {
 color: var(--kang-color);
 content: "";
-display: block;
+display: inline-block;
 width: var(--kang-size);
 height: var(--kang-size);
 border-radius: 50%;
 background-image: radial-gradient(closest-side, lime 20%, white 40%, lime 0, lime 60%, white 0, white 80%, lime 0);
 box-shadow: 5px 5px var(--kang-shadow-size) rgba(0, 0, 0, 0.4);
-transition: opacity 0.8s ease-out, transform 0.1s ease-in;  
+transition: 0.8s ease-out, transform 0.1s ease-in;  
 }
 
 .kang-input:checked + .kang:before{
@@ -171,6 +223,8 @@ transition: opacity 0.8s ease-out, transform 0.1s ease-in;
     animation: points-up 1.5s forwards;
 }
 
+
+
 @keyframes kang-fadeout {
     12% {
       transform: scale(0.95);
@@ -180,7 +234,7 @@ transition: opacity 0.8s ease-out, transform 0.1s ease-in;
     }
   }
   
-  @keyframes points-up {
+@keyframes points-up {
     10% {
       transform: translate(-50%, calc(-50% - 3rem));
       opacity: 1;
@@ -190,14 +244,53 @@ transition: opacity 0.8s ease-out, transform 0.1s ease-in;
     }
   }
   
-  @keyframes kang-movement {
-    100% {
-      transform: translateY(calc(102vh + var(--bullseye-total-size)));
+@keyframes kang-movement {
+    0% {
+        transform: translateY(-1000px);
+        opacity: 1;
+    }
+    50%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(10000);
+        opacity: 0;
     }
   }
   
-  @keyframes score-end {
+@keyframes score-end {
     100% {
       transform: translateY(calc(100% - 50vh)) scale(2.2);
     }
   }
+
+@keyframes pulse{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
+@keyframes result{
+    0%{
+        opacity: 0;
+    }
+    20%{
+        opacity: 0;
+    }
+    40%{
+        opacity: 0;
+    }
+    60%{
+        opacity: 0;
+    }
+    80%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}

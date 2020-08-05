@@ -265,7 +265,7 @@ h1 span{
     position: absolute;
     right: 0;
     width: 0;
-    background: blue;
+    background: rgba(103, 21, 197, 0.5);
     border-left: 1px solid #000; 
 
     animation: typing 15s steps(225);
@@ -328,11 +328,34 @@ h1 span{
     grid-column: 4;
 }
 
+/*final*/
 #end{
     grid-row: 3;
     grid-column: 3;
+    background-image: url(../img/end.jpg);
+    background-size: cover; 
+   
 }
 
+#end h2{
+    color: rgb(1, 1, 14);
+    font-weight: 300;
+    text-shadow: 1.5px 1.5px 0 yellow;
+    text-align: center;
+    position: absolute;
+    font-size: 45px;
+    top: 10px;
+    animation: pulse 0.8s infinite;
+}
+
+@keyframes pulse{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
 /* ARROWS */
 
 .left-arrow{
