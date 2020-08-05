@@ -844,17 +844,62 @@ h1 span{
     background-color: #d07e8a;
 }
 
-input {
-    width: 80px;
-    font-family: 'Lexend Zetta', sans-serif;
-    text-align: center;
-    border-radius: 4px;
+#box1 {
+    width: 100px;
+    position: absolute;
+    bottom: 100px;
+    left: 500px;
 }
 
-#form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+#box2 {
+    width: 100px;
+    position: absolute;
+    bottom: 50px;
+    left: 480px;
+    z-index: 1;
+}
+
+#box3 {
+    width: 100px;
+    position: absolute;
+    bottom: 100px;
+    right: 600px;
+    z-index: 1;
+}
+
+#letterL {
+    position: absolute;
+    bottom: 120px;
+    right: 650px;
+    cursor: pointer;
+    z-index: 2;
+    color: #dd9c4c;
+    font-family: 'Lexend Zetta', sans-serif;
+}
+
+#letterL:hover, #false1:hover, #false2:hover {
+    color: #355d1e;
+    font-family: 'Lexend Zetta', sans-serif;
+}
+
+#false1 {
+    color: #dd9c4c;
+    font-family: 'Lexend Zetta', sans-serif;
+    position: absolute;
+    bottom: 60px;
+    left: 520px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+#false2 {
+    color: #dd9c4c;
+    font-family: 'Lexend Zetta', sans-serif;
+    position: absolute;
+    bottom: 140px;
+    left: 520px;
+    cursor: pointer;
+    z-index: 2;
 }
 
 /*================================BART ROOM================================*/
@@ -869,20 +914,65 @@ input {
     background-color: #f5a0b3;
 }
 
-#letter {
+#ball {
+    position: absolute;
+    bottom: 100px;
+    right: 400px;
+    width: 80px;
+    height: 60px;
+}
+
+#false {
     position: absolute;
     left: 215px;
     bottom: 130px;
     background-color: #c2b0ed;
     width: 20px;
     height: 20px;
-    padding: 2px;
     border-color: #c2b0ed;
 }
 
-#letter:hover {
-    border-color: black;
+#false:hover {
+    border-color: #fff;
+    cursor: pointer;
 }
+
+#form {
+    position: absolute;
+    right: 65px;
+    bottom: 380px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    width: 90px;
+    font-family: 'Lexend Zetta', sans-serif;
+    text-align: center;
+    border-radius: 4px;
+}
+
+
+#letter {
+    position: absolute;
+    bottom: 130px;
+    right: 430px;
+    width: 14px;
+    height: 14px;
+    padding: 2px;
+    font-size: 10px;
+    background-color: black;
+    border-radius: 10px;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+}
+
+#letter:hover {
+    border: solid #fff 2px;
+}
+
 
 /*================================LISA ROOM================================*/
 
