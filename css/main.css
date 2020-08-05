@@ -33,6 +33,42 @@ main>div {
     background-color: #d07e8a;
 }
 
+#box1 {
+    width: 100px;
+    position: absolute;
+    bottom: 100px;
+    left: 500px;
+}
+
+#box2 {
+    width: 100px;
+    position: absolute;
+    bottom: 50px;
+    left: 480px;
+}
+
+#box3 {
+    width: 100px;
+    position: absolute;
+    bottom: 100px;
+    right: 600px;
+    z-index: 1;
+}
+
+#letterL {
+    position: absolute;
+    bottom: 120px;
+    right: 650px;
+    cursor: pointer;
+    z-index: 2;
+    color: #dd9c4c;
+    font-family: 'Lexend Zetta', sans-serif;
+}
+
+#letterL:hover {
+    color: #355d1e;
+}
+
 /*BART'S ROOM*/
 
 #bart-room {
