@@ -26,7 +26,7 @@
     left: 0;
     color: red;
     text-shadow: 2px 2px 0 lime;
-    background-image: url(../img/skygif.gif);
+    background-image: url(../img/game/skygif.gif);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -121,7 +121,7 @@ body {
     overflow: hidden;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: var(--text-color);
-    background-image: url(../img/skygif.gif);
+    background-image: url(../img/game/skygif.gif);
     background-size: cover;
     user-select: none;
     padding: 25px;

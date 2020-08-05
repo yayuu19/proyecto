@@ -1,4 +1,4 @@
-location.href='https://yayuu19.github.io/startavina-desafio1/index#intro';
+//location.href='https://yayuu19.github.io/startavina-desafio1/index#intro';
 
 var letter = "H"
 
