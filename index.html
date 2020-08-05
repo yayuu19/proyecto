@@ -180,14 +180,12 @@
             </div>
 
             <div id="hallway" class="slides">
-                <form action="#maggie-room" id="form">
-                    <label>
-                        <input type="text" name="code" size="20" id="code" required pattern="1234">
-                    </label>
-                    <label>
-                        <input type="submit" value="check" id="check">
-                    </label>
-                </form>
+                <div id="letterL">L</div>
+                <div id="false1">#</div>
+                <div id="false2">$</div>
+                <img src="img/caja cerrada.png" alt="box" id="box1">
+                <img src="img/caja cerrada.png" alt="box" id="box2">
+                <img src="img/caja cerrada.png" alt="box" id="box3">
                 <div class="right-arrow">
                     <a href="#bart-room">
                         <img src="https://img.icons8.com/plasticine/100/000000/circled-chevron-right.png"/>
@@ -254,7 +252,19 @@
             </div>
 
             <div id="bart-room" class="slides">
-                <button id="letter" ondblclick="show(letter)"></button>
+                <div class="form">
+                    <form action="#maggie-room" id="form">
+                        <label>
+                            <input type="text" name="code" size="20" id="code" required pattern="charles">
+                        </label>
+                        <label>
+                            <input type="submit" value="check" id="check">
+                        </label>
+                    </form>
+                </div>
+                <button id="false" ondblclick="notTrue()"></button>
+                <img src="img/pelota.png" alt="ball" id="ball">
+                <button id="letter" ondblclick="show(letterC)"></button>
                 <div class="right-arrow">
                     <a href="#lisa-room">
                         <img src="https://img.icons8.com/plasticine/100/000000/circled-chevron-right.png"/>
