@@ -18,3 +18,4 @@ var letter = "H"
      let puerta = document.getElementById("puertacentral")
       puerta.addEventListener("click",function(){puerta.style.transform = "rotateY(110deg)"} );
     }())
+
