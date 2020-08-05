@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Zetta&display=swap');
 
+/*============================GENERAL STYLES============================*/
 
 html {
     margin: 0;
@@ -14,9 +15,10 @@ main{
 
 body{
     margin: 0;
+    font-family: 'Press Start 2P', cursive;
 }
 
-div{
+.slides{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,58 +26,148 @@ div{
     height: 100vh;
 }
 
+/*================================INTRO================================*/
+
 #intro{
     grid-row: 3;
     grid-column: 1;
-    background-image: linear-gradient(to bottom, rgb(57, 84, 202),  skyblue);
-    position: relative;
+    background-image: linear-gradient(to bottom, rgb(40, 47, 102),  rgb(50, 75, 143));
+    width: 100vw;
+    overflow: hidden;
 }
 
-.cloud{
+#intro audio, .l-clouds, .r-clouds, article, #title, #homer-running, #aliens{
     position: absolute;
-    width: 70%;
 }
 
 #cloud1{
-    left: 0;
-    z-index: 2;
-    animation-name: cloudMovement;
-    animation-duration: 4s;
-}
-
-@keyframes cloudMovement{
-    0% {
-        transform: translateX(0);
-    }
-
-    100% {
-        transform: translateX(-10em);
-    }
-
+    top: 0%;
+    right: 20%
 }
 
 #cloud2{
+    top: 40%;
+    left: 60%;
+    width: 30%;
+}
+
+#cloud3{
+    top: 0%;
+    left: 20%;
+}
+
+#cloud4{
+    top: 20%;
+    left: 0%;
+}
+
+#cloud5{
+    top: 50%;
+    right: 0%
+}
+
+.l-clouds{
+    width: 50%;
+    left: 0;
+    animation: toLeft 6s ease-out forwards;
+    z-index: 1;
+}
+
+.r-clouds{
+    width: 50%;
     right: 0;
-    transform: translateX(-10em) 4s;
+    animation: toRight 6s ease-out forwards;
+    z-index: 1;
+}
+
+@keyframes toLeft{
+    0% {transform: translateX(0);}
+    25% {z-index: 3;}
+    100% {transform: translateX(-20em); z-index: 1;}
+}
+
+@keyframes toRight{
+    0% {transform: translateX(0);}
+    45% {z-index: 3;}
+    100% {transform: translateX(20em); z-index: 1;}
 }
 
 #title{
+    width: 35%;
+    top: 10%;
+    animation: titleMov 8s;
+    z-index: 2;
+}
+
+@keyframes titleMov{
+    0% {transform: scale(0);}
+    100% {transform: scale(1);}
+}
+
+#intro article{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 2%;
+    bottom: 20%;
+    z-index: 4;
+}
+
+#intro article p{
+    margin-left: -200px;
     width: 50%;
+    color: black;
+    text-shadow: 1px 1px 5px yellow;
+    text-align: center;
+}
+
+#homer-running{
+    width: 10%;
+    right: 150px;
+    bottom: 22%;
+    z-index: 5;
+}
+
+#aliens{
+    width: 20%;
+    left: 0;
+    top: 80px;
+    animation: run 8s ease forwards;
+    animation-delay: 3s;
     z-index: 1;
-    animation-name: titleMovement;
-    animation-duration: 4s;
-    animation-delay: 1s;
 }
 
-@keyframes titleMovement{
-    0% {
-        transform: scale(1);
-    }
-
-    100% {
-        transform: scale(1.2);
-    }
+@keyframes run{
+    1% {transform: translate(0,-100px);}
+    25% {transform: translate(80px, 0);}
+    100% {transform: translate(800px,0px);}
 }
+
+#start{
+    margin-left: -250px;
+    background-color: rgb(185, 38, 2);
+    padding: 40px 15px;
+    border-radius: 50%;
+    font-family: 'Press Start 2P', cursive;
+    border-width: 6px;
+    border-top-color: rgb(150, 144, 144);
+}
+
+#start a{
+    display: inherit;
+    align-items: center;
+    text-shadow: 2px 3px 1px black;
+    color: white;
+    text-decoration: none;
+}
+
+audio{
+    bottom: 20px;
+    z-index: 5;
+}
+
+/*================================ENTRY================================*/
 
 #entry{
     grid-row: 3;
@@ -86,7 +178,9 @@ div{
     grid-row: 2;
     grid-column: 2;
 }
-/*ESTILOS DEL HALL*/
+
+/*================================HALL================================*/
+
 #hall{
     width: 100vw;
     height: 100vh;
@@ -423,10 +517,8 @@ h1{
         }
     }
 
-/*HASTA ACA LOS ESTILOS DEL HALL*/
+/*================================LIVING================================*/
 
-
-/*Estilos del living*/
 #living{
     grid-row: 2;
     grid-column: 1;
@@ -632,18 +724,121 @@ h1 span{
     }
 }
 
-/*______________________________________________ */ 
+/*================================KITCHEN================================*/
+ 
 #kitchen{
     grid-row: 1;
     grid-column: 1;
 }
 
-#dinning-room{
+/*================================DINING ROOM================================*/
+
+#dining-room{
     grid-row: 2;
     grid-column: 3;
+    background-image: url('../img/dining-room/background.jpg');
+    background-size: cover;
+    overflow: hidden;
 }
 
-/*HALLWAY*/
+#dining-room article, #hint, #switcher-off{
+    position: absolute;
+}
+
+#dining-room article{
+    color: rgb(0, 0, 0);
+    bottom: 4px;
+    z-index: 0;
+}
+
+#hint{
+    right: 20px;
+    top: 120px;
+    color: rgba(104, 220, 255, 0.829);
+    z-index: 1;
+}
+
+#dining-room>img{
+    position: absolute;
+    z-index: 2;
+}
+
+#carpet{
+    width: 60%;
+    bottom: -35px;
+    left: 290px;
+}
+
+#carpet:hover{
+    transform-origin: top;
+    transform: rotateX(65deg);
+}
+
+#teapot-lid{
+    width: 40px;
+    top: 235px;
+    right: 448px;
+}
+
+#teapot-lid:hover{
+    transform-origin: right;
+    transform: rotate(40deg);
+}
+
+#painting{
+    width: 30px;
+    top: 195px;
+    right: 690px;
+}
+
+#painting:hover{
+    transform: translateY(-60px);
+    transition-duration: 1s;
+}
+
+#chicken{
+    width: 12%;
+    top: 325px;
+    right: 600px;
+}
+
+#chicken:hover{
+    transform: translateX(80px);
+    transition-duration: 2s;
+}
+
+#glass{
+    width: 2%;
+    top: 360px;
+    left: 435px;
+}
+
+#curtain{
+    width: 8%;
+    top: 0px;
+    right: 0px;
+}
+
+#switcher-on{
+    width: 15px;
+    left: 125px;
+    top: 285px;
+}
+
+#switcher-off{
+    display: none;
+    top: 295px;
+    left: 125px;
+}
+
+.lights-off{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .6);
+    z-index: 3;
+}
+
+/*================================HALLWAY================================*/
 
 #hallway{
     grid-row: 1;
@@ -668,7 +863,7 @@ input {
     align-items: center;
 }
 
-/*BART'S ROOM*/
+/*================================BART ROOM================================*/
 
 #bart-room{
     grid-row: 1;
@@ -679,7 +874,6 @@ input {
     background-size: 100%;
     background-color: #f5a0b3;
 }
-
 
 #letter {
     position: absolute;
@@ -696,13 +890,8 @@ input {
     border-color: black;
 }
 
-/*LISA'S ROOM*/
+/*================================LISA ROOM================================*/
 
-#lisa-room{
-    grid-row: 1;
-    grid-column: 4;
-}
-/*ESTILOS DEL CUARTO DE LISA*/
 #lisa-room{
     grid-row: 1;
     grid-column: 4;
@@ -732,16 +921,14 @@ input {
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-around;
-  
-
 }
+
 #ventana *{
- width:128px ;
- height:170px ;
- background-color: turquoise;
-
-
+    width:128px ;
+    height:170px ;
+    background-color: turquoise;
 }
+
 #nube1{
     width: 30px;
     height: 10px;
@@ -1027,19 +1214,22 @@ input {
 /*HASTA ACA LOS ESTILOS DEL CUARTO DE LISA*/
 
 
+/*================================MAGGIE ROOM================================*/
+
 #maggie-room{
     grid-row: 2;
     grid-column: 4;
 }
 
-
+/*================================GAME================================*/
   
 #game {
     grid-row: 3;
     grid-column: 4;
 }
 
-/*final*/
+/*================================END ROOM================================*/
+
 #end{
     grid-row: 3;
     grid-column: 3;
@@ -1066,8 +1256,6 @@ input {
     width: 100vw;
 }
 
-
-
 @keyframes pulse{
     from{
         opacity: 1;
@@ -1076,22 +1264,25 @@ input {
         opacity: 0;
     }
 }
-/* ARROWS */
+
+/*================================ARROWS================================*/
 
 .left-arrow{
     height: fit-content;
     position: absolute;
-    top: 50%;
+    top: 45%;
     left: 20px;
     cursor: pointer;
+    z-index: 5;
 }
 
 .right-arrow{
     height: fit-content;
     position: absolute;
     right: 20px;
-    top: 50%;
+    top: 45%;
     cursor: pointer;
+    z-index: 5;
 }
 
 .bottom-arrow{
@@ -1099,6 +1290,7 @@ input {
     position: absolute;
     bottom: 2%;
     cursor: pointer;
+    z-index: 5;
 }
 
 .top-arrow{
@@ -1106,6 +1298,7 @@ input {
     position: absolute;
     top: 2%;
     cursor: pointer;
+    z-index: 5;
 }
 
 .left-arrow a, .right-arrow a, .bottom-arrow a, .top-arrow a{
@@ -1113,5 +1306,3 @@ input {
     height: inherit;
     z-index: 1000;
 }
-
-
